@@ -11,6 +11,7 @@
 				var currentId = params.id;
 				var currentMonster = null;
 
+				//this could be find instead of forEach, then it wouldnt have to look at every single item (it would take the first match)
 				data.forEach(function(monster){
 					if (monster.id == currentId){
 						currentMonster = monster;
