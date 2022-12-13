@@ -11,9 +11,15 @@
 				data.forEach(function(monster) { %>
 				<li>
 					<h2><%=monster.name%></h2>
+					<picture>
+						<img src="<%=monster.image%>" alt="monster headshot">
+					</picture>
 					<p>Age: <%=monster.age%></p>
 					<p>Gender: <%=monster.gender%></p>
-					<a href="#">More info</a>
+					<p> Characteristics: <%=monster.characteristics.join(', ')%>
+						
+					</p>
+					<a href="/detail/<%=monster.id%>">More info</a>
 				</li>
 				<% }) %>
 

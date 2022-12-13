@@ -17,8 +17,17 @@ app.get('/monsters', function(request, response) {
 	response.render('monsters', {data: monsters})
 })
 
-app.get('/detail', function(request, response) {
-	response.render('detail', {data: monsters})
+app.get('/adopt', function(request, response) {
+	response.render('adopt')
+})
+
+app.get('/about', function(request, response) {
+	response.render('about')
+})
+
+app.get('/detail/:id', function(request, response) {
+	response.render('detail', {data: monsters, params: request.params})
+	// response.render('detail', {data: monsters})
 })
 
 //if no route matches use use()

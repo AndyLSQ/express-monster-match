@@ -6,6 +6,32 @@
 
 		<module-name>
 			<h1>Detail Page</h1>
+
+			<% 
+				var currentId = params.id;
+				var currentMonster = null;
+
+				data.forEach(function(monster){
+					if (monster.id == currentId){
+						currentMonster = monster;
+						console.log(currentMonster)
+					}
+				})
+			%>
+
+				
+			<h2><%=currentMonster.name%></h2>
+			<picture>
+				<img src="../<%=currentMonster.image%>" alt="monster headshot">
+			</picture>
+			<p>Age: <%=currentMonster.age%></p>
+			<p>Gender: <%=currentMonster.gender%></p>
+			<% currentMonster.description.forEach(function(paragraph) { %>
+					<p><%=paragraph%></p>
+				<% })
+			%>
+				
+
 		</module-name>
 
 	</inner-column>
