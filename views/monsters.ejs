@@ -9,11 +9,14 @@
 
 			<%
 				data.forEach(function(monster) { %>
-				<li>
+				<li class = "<%= monster.adopted ? 'adopted' : 'available' %>">
 					<h2><%=monster.name%></h2>
-					<picture>
+					<picture class = "<%= monster.adopted ? 'adopted' : 'available' %>">
 						<img src="<%=monster.image%>" alt="monster headshot">
 					</picture>
+					<% if (monster.adopted) { %>
+						<p>THIS MONSTER HAS BEEN ADOPTED</p>
+						<%}%>
 					<p>Age: <%=monster.age%></p>
 					<p>Gender: <%=monster.gender%></p>
 					<p> Characteristics: <%=monster.characteristics.join(', ')%>
