@@ -32,7 +32,6 @@ app.get('/about', function(request, response) {
 
 app.get('/detail/:id', function(request, response) {
 	response.render('detail', {data: monsters, params: request.params})
-	// response.render('detail', {data: monsters})
 })
 
 //if no route matches use use()

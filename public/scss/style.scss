@@ -1,0 +1,30 @@
+@use 'typography';
+
+
+body{
+	background-color: beige;
+	list-style-type: none;
+}
+
+picture {
+	display: block;
+	max-width: 600px;
+	border: 3px solid red;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+li:is(.available, .adopted) {
+	border: 3px solid blue;
+}
+
+li.adopted {
+	color: #888;
+}
+
+picture.adopted {
+	opacity: .5;
+}
