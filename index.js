@@ -1,12 +1,17 @@
 import express from 'express';
+import monsters from './monsterData.json' assert {type: 'json'};
 
 const app = express();
 
 app.set('view engine', 'ejs');
 
+// Start app
+app.listen(1982, function(){
+	console.log("server started at http://localhost:1982/")
+});
+
 app.use(express.static('public'));
 
-import monsters from './monsterData.json' assert {type: 'json'};
 
 //router
 app.get('/', function(request, response) {
@@ -35,8 +40,3 @@ app.use(function(request, response){
 	response.status(404).render('404', {query: request.url})
 })
 
-
-// Start app
-app.listen(1982, function(){
-	console.log("server started at http://localhost:1982/")
-});
