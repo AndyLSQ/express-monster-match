@@ -37,5 +37,5 @@ app.get('/detail/:id', function(request, response) {
 //if no route matches use use()
 app.use(function(request, response){
 	response.status(404).render('404', {query: request.url})
-}) 
+})
 
