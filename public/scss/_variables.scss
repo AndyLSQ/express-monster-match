@@ -1,1 +1,18 @@
-_variables.scss
+
+
+$paper-light: hsla(40, 9%, 99%, 1.00);
+
+
+
+:root {
+	//colors
+	--paper: hsla(40, 10%, 94%, 1.00);
+	--paper-light: hsla(40, 9%, 99%, 1.00);
+	--paper-dark: hsla(220, 4%, 18%, 1.00);
+	--ink: hsla(220, 4%, 18%, 1.00);
+	--highlight: hsla(10, 87%, 66%, 1.00);
+	--highlight2: hsla(228, 52%, 51%, 1.00);
+
+	//effects
+	--full-shadow: 6px 6px 0 hsla(30, 3%, 77%, 0.5);
+}

@@ -1,16 +1,248 @@
-body {
-  font-family: sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&family=Permanent+Marker&display=swap");
+:root {
+  --paper: hsla(40, 10%, 94%, 1.00);
+  --paper-light: hsla(40, 9%, 99%, 1.00);
+  --paper-dark: hsla(220, 4%, 18%, 1.00);
+  --ink: hsla(220, 4%, 18%, 1.00);
+  --highlight: hsla(10, 87%, 66%, 1.00);
+  --highlight2: hsla(228, 52%, 51%, 1.00);
+  --full-shadow: 6px 6px 0 hsla(30, 3%, 77%, 0.5);
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
 body {
-  background-color: beige;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h4 {
+  display: block;
+  font-size: 1em;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: var(--ink);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* be at least a full viewport height */
+}
+body main {
+  margin: 60px 0px;
+  flex-grow: 1;
+}
+
+inner-column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 30px;
+  width: 90%;
+  max-width: 900px; /* could be a variable in settings */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 500px) {
+  inner-column {
+    width: 98%;
+  }
+}
+header {
+  border-bottom: 3px solid hsl(220deg, 4%, 18%);
+  box-shadow: var(--full-shadow);
+  font-weight: bold;
+  background-color: hsl(40deg, 9%, 99%);
+}
+header inner-column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0px;
+}
+header nav {
+  display: flex;
+  gap: 20px;
+  font-size: 1rem;
+}
+header nav a {
+  text-decoration: none;
+  color: hsl(220deg, 4%, 18%);
+  box-shadow: inset 0 0 0 0 hsl(10deg, 87%, 66%);
+  margin: 0 -0.5rem;
+  padding: 0 0.5rem;
+  transition: color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+header nav a:hover {
+  box-shadow: inset 100px 0 0 0 hsl(10deg, 87%, 66%);
+  color: white;
+}
+
+footer {
+  background-color: hsl(220deg, 4%, 18%);
+  color: var(--paper);
+  padding: 30px 0px;
+}
+footer .logo a {
+  margin-bottom: 0;
+  color: hsl(40deg, 9%, 94%);
+}
+footer p {
+  color: var(--paper);
+}
+
+.home p {
+  font-size: 1.1rem;
+}
+
+.button1 {
+  padding: 15px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  appearance: none;
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  font-weight: 700;
+  color: var(--ink);
+  background-color: var(--highlight);
+  border: 4px solid var(--ink);
+  box-shadow: var(--full-shadow);
+}
+
+.button1:hover {
+  color: var(--highlight);
+  background-color: var(--ink);
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.logo span {
+  font-family: "Permanent Marker", cursive;
+  font-size: 2rem;
+  color: hsl(10deg, 87%, 66%);
+}
+.logo a {
+  text-decoration: none;
+  color: hsl(220deg, 4%, 18%);
+  transition: color 0.25s ease-in-out;
+}
+.logo a:hover {
+  color: hsl(10deg, 87%, 66%);
+  transition: color 0.25s ease-in-out;
+}
+
+body {
+  background-color: var(--paper);
   list-style-type: none;
+}
+
+:root {
+  box-sizing: border-box;
 }
 
 picture {
   display: block;
-  max-width: 600px;
-  border: 3px solid red;
+  max-width: 700px;
+  border: 3px solid #f4775e;
+  box-shadow: 6px 6px 0 #c6c4c2;
 }
 
 img {

@@ -1,0 +1,17 @@
+
+footer {
+	background-color: hsla(220, 4%, 18%, 1.00);
+	color: var(--paper);
+	padding: 30px 0px;
+	// box-shadow: 6px -3px 0 #c6c4c2;
+	// border-top: 6px solid var(--paper-light);
+
+	.logo a {
+		margin-bottom: 0;
+		color: hsla(40, 9%, 94%, 1.00);
+	}
+
+	p {
+		color: var(--paper);
+	}
+}

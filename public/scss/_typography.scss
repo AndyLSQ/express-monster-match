@@ -1,3 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&family=Permanent+Marker&display=swap');
+
+
 body{
-	font-family: sans-serif;
+	font-family: 'Montserrat', sans-serif;;
+}
+
+h1 {
+  // font-family: 'Permanent Marker', cursive;
+  // color: var(--highlight2);
+  // text-shadow: 3px 3px 0 #c6c4c2;
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h2 {
+  // font-family: 'Permanent Marker', cursive;
+  // color: var(--highlight2);
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h3 {
+  // font-family: 'Permanent Marker', cursive;
+  // color: hsla(10, 87%, 66%, 1.00);
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h4 {
+  display: block;
+  font-size: 1em;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.4;
+	margin-top: 1em;
+	margin-bottom: 1em;
+  color: var(--ink);
 }

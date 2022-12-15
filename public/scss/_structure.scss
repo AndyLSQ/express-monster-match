@@ -1,1 +1,31 @@
-_structure.scss
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh; /* be at least a full viewport height */
+
+	main {
+	margin: 60px 0px;
+	flex-grow: 1;
+}
+
+} 
+
+inner-column {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 30px;
+	width: 90%;
+	max-width: 900px; /* could be a variable in settings */
+	margin-right: auto;
+	margin-left: auto;
+	// padding: 80px 0px; /* a loose default */
+}
+
+@media (max-width: 500px) {
+	inner-column {
+		width: 98%;
+	}
+}
+
