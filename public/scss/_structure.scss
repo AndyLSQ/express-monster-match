@@ -5,7 +5,7 @@ body {
 	min-height: 100vh; /* be at least a full viewport height */
 
 	main {
-	margin: 60px 0px;
+	margin: 50px 0px;
 	flex-grow: 1;
 }
 
@@ -17,10 +17,20 @@ inner-column {
 	flex-direction: column;
 	gap: 30px;
 	width: 90%;
-	max-width: 900px; /* could be a variable in settings */
+	max-width: 1200px; /* could be a variable in settings */
 	margin-right: auto;
 	margin-left: auto;
 	// padding: 80px 0px; /* a loose default */
+}
+
+picture {
+	display: block;
+	box-shadow: 6px 6px 0 #c6c4c2;
+}
+
+img {
+	display: block;
+	width: 100%;
 }
 
 @media (max-width: 500px) {

@@ -1,32 +1,44 @@
 
 <%- include('header.ejs') %>
 
-<section>
+<section class="meet">
 	<inner-column>
 
-		<module-name>
-			<h1>Monsters Page</h1>
+		<h1>Meet <span>Your</span> Monster</h1>
 
+		<ul class="monsters">
 			<%
-				data.forEach(function(monster) { %>
-				<li class = "<%= monster.adopted ? 'adopted' : 'available' %>">
-					<h2><%=monster.name%></h2>
-					<picture class = "<%= monster.adopted ? 'adopted' : 'available' %>">
-						<img src="<%=monster.image%>" alt="monster headshot">
-					</picture>
-					<% if (monster.adopted) { %>
-						<p>THIS MONSTER HAS BEEN ADOPTED</p>
-						<%}%>
-					<p>Age: <%=monster.age%></p>
-					<p>Gender: <%=monster.gender%></p>
-					<p> Characteristics: <%=monster.characteristics.join(', ')%>
-						
-					</p>
-					<a href="/detail/<%=monster.id%>">More info</a>
-				</li>
-				<% }) %>
+				data.forEach(function(monster) { 
+					// var blurb = monster.description[0].substring(0,100) + '...'
+					var blurb = monster.description[0]
+						.split(' ')
+						.slice(0, 20)
+						.join(' ')
+						+ '...';
 
-		</module-name>
+				%>
+				<li class = "<%= monster.adopted ? 'card adopted' : 'card available' %>">
+					<% if (monster.adopted) { %>
+						<status-label>ADOPTED</status-label>
+						<%}%>
+					<card-content>
+							<h2><%=monster.name%></h2>
+							<picture class = "<%= monster.adopted ? 'adopted' : 'available' %>">
+								<img src="<%=monster.image%>" alt="monster headshot">
+							</picture>
+						<card-data>
+							<description-text>
+								<card-stats>
+									<p><strong><%=monster.age%> year old <%=monster.gender%> </strong></p>
+								</card-stats>
+								<p class="blurb"><%=blurb%></p>
+							</description-text>
+							<a href="/detail/<%=monster.id%>" class="button2">More info</a>
+						</card-data>
+					</card-content>
+				</li>
+			<% }) %>
+		</ul>
 
 	</inner-column>
 </section>

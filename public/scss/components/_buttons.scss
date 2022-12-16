@@ -20,3 +20,25 @@
 	background-color: var(--ink);
     // border: 4px solid var(--highlight);
 }
+
+.button2 {
+    padding: 15px 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    appearance: none;
+    transition: background-color .25s ease,color .25s ease,box-shadow .25s ease;
+    font-weight: 700;
+    color: var(--ink);
+    background-color: var(--highlight);
+    border: 2px solid var(--ink);
+    box-shadow: var(--full-shadow);
+}
+
+.button2:hover {
+    color: var(--highlight);
+    background-color: var(--ink);
+    // border: 4px solid var(--highlight);
+}

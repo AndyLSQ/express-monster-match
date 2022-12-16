@@ -7,11 +7,17 @@
 @use 'modules/header';
 @use 'modules/footer';
 @use 'modules/home';
+@use 'modules/meet';
 
 //components
 @use 'components/buttons';
 @use 'components/logo';
 
+
+
+:root {
+	box-sizing: border-box;
+}
 
 body{
 	background-color: var(--paper);
@@ -19,30 +25,8 @@ body{
 }
 
 
-:root {
-	box-sizing: border-box;
-}
-
-picture {
-	display: block;
-	max-width: 700px;
-	border: 3px solid #f4775e;
-	box-shadow: 6px 6px 0 #c6c4c2;
-}
-
-img {
-	display: block;
-	width: 100%;
-}
 
 li:is(.available, .adopted) {
-	border: 3px solid blue;
+	// border: 3px solid blue;
 }
 
-li.adopted {
-	color: #888;
-}
-
-picture.adopted {
-	opacity: .5;
-}

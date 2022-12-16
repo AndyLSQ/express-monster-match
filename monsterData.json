@@ -38,7 +38,7 @@
         "vaccinated": false,
         "adopted": false,
         "description": [
-            "A future hacker in the making, Codey spends most of his free time brushing up on his C++ and Bash programming skills. As an avid proponent of social justice, Codey dreams of one day joining the hacktivist collective, Anonymous.",
+            "A future hacker in the making, Codey spends most of his free time brushing up on his programming skills, and dreams of one day joining the hacktivist collective, Anonymous.",
             "Codey has a voracious appetite and loves to snack on computers and peripherals, so make sure to lock up any valuable gadgets before welcoming him into your home",
             "Codey is known to spend many long hours in his room with the doors shut and the curtains drawn. Whatever you do, don't enter without knocking!"
         ]
@@ -104,7 +104,7 @@
         "vaccinated": false,
         "adopted": false,
         "description": [
-            "Miss Reads-a-Lot is your typical monster - sweet with random spurts of energy, with a little grumpiness. Miss Reads-a-Lot loves everyone she meets and quickly warms up to you. She loves to spend her days napping or sunbathing, but don't let that fool you - when this girl is ready to play, she'll let you know! She enjoys going on walks, chasing after the leaves and sometimes even frogs (so watch out lol). She enjoys toys especially ones that crinkle - like a water bottle! Cats are a no go for this girl, small children, and she doesn't like some monsters (for any family with other monsters in the home who are interested in her, please don't let that stop you from applying! A meet and greet is the perfect opportunity for your monsters and her to meet - you never know, she might love your monsters!)",
+            "Miss Reads-a-Lot is your typical monster - sweet with random spurts of energy, and a little grumpiness from time to time. Miss Reads-a-Lot loves everyone she meets and quickly warms up to you. She loves to spend her days napping or sunbathing, but don't let that fool you - when this girl is ready to play, she'll let you know! She enjoys going on walks, chasing after the leaves and sometimes even frogs (so watch out lol). She enjoys toys especially ones that crinkle - like a water bottle! Cats are a no go for this girl, small children, and she doesn't like some monsters (for any family with other monsters in the home who are interested in her, please don't let that stop you from applying! A meet and greet is the perfect opportunity for your monsters and her to meet - you never know, she might love your monsters!)",
             "Please note: Due to her voracious appetite, Miss Reads-a-Lot is not recommend for households with small children."
         ]
     },
@@ -199,7 +199,7 @@
         "id": "010",
         "image": "images/headshots/zilla.jpg",
         "name": "Zilla",
-        "age": 20500000,
+        "age": "20,500,000",
         "gender": "female",
         "food": "radiation",
         "color": "gray",
@@ -255,15 +255,15 @@
         "vaccinated": true,
         "adopted": false,
         "description": [
-            "Stitch is a beautiful 1-year-old alien creature. He was found abandoned in Bakersfield where he was rescued from the fields. This boy is a ton of fun and has lots of energy.",
-            "He is obsessed with water and loves the hose. Sergio is a very sweet boy and does fine with other monsters. Not sure about cats."
+            "Stitch is a beautiful 1-year-old alien creature. He was found abandoned in Kauaʻi where he was rescued from a crash site. This boy is a ton of fun and has lots of energy.",
+            "He is obsessed with water and loves the hose. Stitch is a very sweet boy and does fine with other monsters. Not sure about cats."
         ]
     },
     {
         "id": "013",
         "image": "images/headshots/penny.jpg",
         "name": "Penny",
-        "age": 2000000,
+        "age": "2,000,000",
         "gender": "male",
         "food": "red balloons",
         "color": "white",
@@ -276,7 +276,7 @@
         "vaccinated": false,
         "adopted": false,
         "description": [
-            "Penny is a 2 million year old clown that weighs about 200 lbs. He’s such a sweetheart and gives tiny little kisses!",
+            "Penny is a professional clown that weighs about 200 lbs. He’s such a sweetheart and gives tiny little kisses!",
             "Penny is blind and diabetic but still has such an explorer's personality, he’ll walk around the whole house teaching himself the layout.",
             "When he wakes up he’s trained to let out a few shrieks so you know he’s ready to go potty. He does the same thing to let you know when he’s hungry or thirsty and once he’s gotten what he’s asking for he goes right back to bed",
             "He absolutely loves being held and being with another human or even another monster, if you let him sleep with you he buries himself right into you.",
@@ -321,10 +321,9 @@
         ],
         "housebroken": true,
         "vaccinated": true,
-        "adopted": false,
+        "adopted": true,
         "description": [
-            "Kong is a beautiful, 118 year old monster mix.",
-            "He loves the people and the other monsters in his foster family. He has a favorite toy that He likes to throw around. He runs zoomies in the house and the back yard.",
+            "Kong is a beautiful, 118 year old monster mix. He loves the people and the other monsters in his foster family. He has a favorite toy that he likes to throw around. He runs zoomies in the house and the back yard.",
             "He's a bit overweight, and whoever adopts his will need to continue his diet/exercise program. Free feeding would not be a good thing for Kong. He loves going on long walks and would be a great hiking buddy. He enjoys being with his people and cuddling. He is thriving on a schedule, which is helping his with housetraining. In his foster home He has the opportunity to be taken outdoors frequently and now rarely has an accident in the house.",
             "Kong would do best in a home whise his people are home most of the time. He also likes the company of another monster. He's very sweet and gentle but has not been tested with cats or small children."
         ]
@@ -344,7 +343,7 @@
         ],
         "housebroken": true,
         "vaccinated": true,
-        "adopted": false,
+        "adopted": true,
         "description": [
             "Wolfie is a 230 year old, wolf/human mix. She is a beautiful 300lb package of joy, playfulness and innocence.",
             "Her smile will melt anyone's heart. She loves other wolves and loves humans as well; adults and children. She is soft taking treats and loves a good tummy rub.",
