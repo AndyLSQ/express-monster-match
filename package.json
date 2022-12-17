@@ -9,6 +9,7 @@
     "start:express": "npx nodemon",
     "watch:sass": "sass --watch public/scss:public/css",
     "dev": "npm-run-all --parallel start:express watch:sass",
+    "build": "",
     "start": "node index.js"
   },
   "author": "",
