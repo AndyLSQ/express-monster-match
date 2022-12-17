@@ -6,38 +6,55 @@
 
 		<h1>Meet <span>Your</span> Monster</h1>
 
-		<ul class="monsters">
-			<%
-				data.forEach(function(monster) { 
-					// var blurb = monster.description[0].substring(0,100) + '...'
-					var blurb = monster.description[0]
-						.split(' ')
-						.slice(0, 20)
-						.join(' ')
-						+ '...';
 
-				%>
-				<li class = "<%= monster.adopted ? 'card adopted' : 'card available' %>">
-					<% if (monster.adopted) { %>
-						<status-label>ADOPTED</status-label>
-						<%}%>
+		<p><%# ctx.prismicH.asText(document[0].data.name) %></p>
+		
+
+		<% //console.log("DOCUMENT", document) %>
+
+
+		<p>-----------delete temporary stuff above this line --------</p>
+
+
+
+
+		<ul class="monsters">
+			<% monsters.forEach(function(monster) {
+				 console.log("MONSTERR: ", monster.uid)
+
+
+				 console.log("MONSTER: ", monster )
+
+				// ctx.prismicH.asText(monster.uid)
+
+				// console.log("LOOOOOOP", monster.data.uid)
+				var name = monster.data.name[0];
+				console.log(name)
+				// ctx.prismicH.asText(monster.data.uid); %>
+
+
+				<%-ctx.prismicH.asHTML(monster.data.name)%>
+				<picture>
+					<% const image = monster.data.image.url %>
+					<%- console.log(image)%>
+
+					<img 
+					  src="<%- image %>"
+					/>
+				</picture>
+				<%-ctx.prismicH.asHTML(monster.data.description)%>
+
+
+			<% }) %>
+
+			
+
+				<li>
 					<card-content>
-							<h2><%=monster.name%></h2>
-							<picture class = "<%= monster.adopted ? 'adopted' : 'available' %>">
-								<img src="<%=monster.image%>" alt="monster headshot">
-							</picture>
-						<card-data>
-							<description-text>
-								<card-stats>
-									<p><strong><%=monster.age%> year old <%=monster.gender%> </strong></p>
-								</card-stats>
-								<p class="blurb"><%=blurb%></p>
-							</description-text>
-							<a href="/detail/<%=monster.id%>" class="button2">More info</a>
-						</card-data>
+						<h2></h2>
 					</card-content>
 				</li>
-			<% }) %>
+
 		</ul>
 
 	</inner-column>

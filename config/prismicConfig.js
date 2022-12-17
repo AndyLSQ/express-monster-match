@@ -4,7 +4,7 @@
 import fetch from 'node-fetch'
 import * as prismic from '@prismicio/client'
 
-const repoName = 'your-repo-name' // Fill in your repository name.
+const repoName = 'monstermatch' // Fill in your repository name.
 const accessToken = '' // If your repository is private, add an access token.
 
 // The `routes` property is your Route Resolver. It defines how you will 
@@ -14,7 +14,7 @@ const accessToken = '' // If your repository is private, add an access token.
 const routes = [
   {
     type: 'page',
-    path: '/:uid',
+    path: '/',
   },
 ]
 

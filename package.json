@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:express": "npx nodemon",
     "watch:sass": "sass --watch public/scss:public/css",
-    "start": "npm-run-all --parallel start:express watch:sass"
+    "dev": "npm-run-all --parallel start:express watch:sass",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
