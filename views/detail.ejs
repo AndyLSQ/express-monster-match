@@ -5,17 +5,18 @@
 	<inner-column>
 
 		<module-name>
-			<h1>Detail Page</h1>
-
+			<%#-ctx.prismicH.asHTML(monster.data.name)%>
+			<%#console.log(data)%>
 			<% 
 				var currentId = params.id;
+				console.log(params);
 				var currentMonster = null;
 
-				//this could be find instead of forEach, then it wouldnt have to look at every single item (it would take the first match)
+				// //this could be find instead of forEach, then it wouldnt have to look at every single item (it would take the first match)
 				data.forEach(function(monster){
 					if (monster.id == currentId){
 						currentMonster = monster;
-						console.log(currentMonster)
+						console.log(currentMonster.name)
 					}
 				})
 			%>
@@ -27,11 +28,24 @@
 			</picture>
 			<p>Age: <%=currentMonster.age%></p>
 			<p>Gender: <%=currentMonster.gender%></p>
+			<p>Favorite Food: <%=currentMonster.food%></p>
+			<h3>Characteristics</h3>
+			<ul>
+			<% currentMonster.characteristics.forEach(function(char) { %>
+					<li><%=char%></li>
+				<% })
+			%>
+			</ul>
+
+			<h3>Description</h3>
 			<% currentMonster.description.forEach(function(paragraph) { %>
 					<p><%=paragraph%></p>
 				<% })
 			%>
-				
+			
+			<div>
+			<a class="button1" href="/adopt">Adoption Info</a>
+		</div>
 
 		</module-name>
 
