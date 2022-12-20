@@ -1,0 +1,32 @@
+<% let descriptionText = String(ctx.prismicH.asText(monster.data.description));
+
+	let blurb = descriptionText.split(' ')
+		.slice(0, 20)
+		.join(' ')
+		+ '...';
+%>
+
+<li class = "<%= monster.data.adopted ? 'card adopted' : 'card available' %>">
+
+	<% if (monster.data.adopted) { %>
+		<status-label>ADOPTED</status-label>
+	<%}%>
+
+	<card-overlay>
+		<card-content>
+			<%-ctx.prismicH.asHTML(monster.data.name)%>
+			<picture>
+				<% const image = monster.data.image.url %>
+				<img src="<%- image %>"/>
+			</picture>
+
+			<div class="stats">
+				<div class="stat"><%=monster.data.age%> Years</div>
+				<div class="stat <%=monster.data.gender%>"><%=monster.data.gender%></div>
+			</div>
+			<p><%=blurb%></p>
+			<%-console.log(monster.uid)%>
+		</card-content>
+		<a href="/detail/<%=monster.uid%>" class="button2">More info</a>
+	</card-overlay>
+</li>

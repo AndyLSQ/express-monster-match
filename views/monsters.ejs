@@ -6,56 +6,28 @@
 
 		<h1>Meet <span>Your</span> Monster</h1>
 
+	<!-- collapse -->
+		<%# ctx.prismicH.asText(document[0].data.name) %>
+		<%# //console.log("DOCUMENT", document) %>
 
-		<p><%# ctx.prismicH.asText(document[0].data.name) %></p>
-		
-
-		<% //console.log("DOCUMENT", document) %>
-
-
-		<p>-----------delete temporary stuff above this line --------</p>
-
-
-
+		<!-- <p>-----------delete temporary stuff above this line --------</p> -->
 
 		<ul class="monsters">
-			<% monsters.forEach(function(monster) {
-				 console.log("MONSTERR: ", monster.uid)
-
-
-				 console.log("MONSTER: ", monster )
-
-				// ctx.prismicH.asText(monster.uid)
-
-				// console.log("LOOOOOOP", monster.data.uid)
-				var name = monster.data.name[0];
-				console.log(name)
-				// ctx.prismicH.asText(monster.data.uid); %>
-
-
-				<%-ctx.prismicH.asHTML(monster.data.name)%>
-				<picture>
-					<% const image = monster.data.image.url %>
-					<%- console.log(image)%>
-
-					<img 
-					  src="<%- image %>"
-					/>
-				</picture>
-				<%-ctx.prismicH.asHTML(monster.data.description)%>
-
-
+			<% monsters.forEach(function(monster) { %>
+				<%- include('monster-card.ejs', {monster})%>
 			<% }) %>
 
-			
-
-				<li>
-					<card-content>
-						<h2></h2>
-					</card-content>
-				</li>
 
 		</ul>
+
+
+
+	</inner-column>
+</section>
+
+
+
+
 
 	</inner-column>
 </section>
