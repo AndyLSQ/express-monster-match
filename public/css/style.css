@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&family=Permanent+Marker&display=swap");
 :root {
   --paper: hsla(40, 10%, 94%, 1.00);
@@ -9,6 +10,7 @@
   --highlight2: hsla(228, 52%, 51%, 1.00);
   --highlight3: hsla(40, 88%, 69%, 1.00);
   --full-shadow: 6px 6px 0 rgba(0,0,0,.2);
+  --highlight-shadow: 6px 6px 0 var(--highlight) ;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -299,6 +301,7 @@ section.meet ul.monsters {
 }
 .card h2 {
   margin: 0px;
+  color: var(--highlight2);
 }
 .card picture {
   aspect-ratio: 6/5;
@@ -330,12 +333,54 @@ section.meet ul.monsters {
 }
 
 .card:hover {
-  box-shadow: 6px 6px 0 var(--highlight);
+  box-shadow: var(--highlight-shadow);
   transition: box-shadow 0.25s ease-in-out;
 }
 
 .adopted card-overlay {
   opacity: 0.35;
+}
+
+.detail inner-column {
+  gap: 30px;
+}
+.detail picture {
+  max-width: 800px;
+  border: 3px solid var(--highlight3);
+  box-shadow: var(--highlight-shadow);
+}
+.detail h2, .detail h3 {
+  margin: 0px;
+  color: var(--highlight2);
+}
+.detail h3 {
+  margin-bottom: 0.5rem;
+}
+.detail stat-list {
+  margin-top: 6px;
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 10px;
+  text-transform: capitalize;
+}
+.detail ul {
+  list-style: none;
+  text-transform: capitalize;
+}
+.detail ul li::before {
+  content: "■";
+  color: var(--highlight);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  list-style-type: square;
+  list-style-position: inside;
+  line-height: 1.4rem;
+}
+.detail strong {
+  font-weight: bold;
+  color: var(--highlight2);
 }
 
 .button1 {

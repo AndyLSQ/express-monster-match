@@ -1,53 +1,58 @@
 
 <%- include('header.ejs') %>
 
-<section>
+<section class="detail">
 	<inner-column>
 
-		<module-name>
-			<%#-ctx.prismicH.asHTML(monster.data.name)%>
-			<%#console.log(data)%>
-			<% 
-				var currentId = params.id;
-				console.log(params);
-				var currentMonster = null;
+	<%#-ctx.prismicH.asHTML(monster.data.name)%>
+	<%#console.log(data)%>
+	<% 
+		var currentId = params.id;
+		console.log(params);
+		var currentMonster = null;
 
-				// //this could be find instead of forEach, then it wouldnt have to look at every single item (it would take the first match)
-				data.forEach(function(monster){
-					if (monster.id == currentId){
-						currentMonster = monster;
-						console.log(currentMonster.name)
-					}
-				})
-			%>
+		// //this could be find instead of forEach, then it wouldnt have to look at every single item (it would take the first match)
+		data.forEach(function(monster){
+			if (monster.id == currentId){
+				currentMonster = monster;
+				console.log(currentMonster.name)
+			}
+		})
+	%>
 
-				
-			<h2><%=currentMonster.name%></h2>
-			<picture>
-				<img src="../<%=currentMonster.image%>" alt="monster headshot">
-			</picture>
-			<p>Age: <%=currentMonster.age%></p>
-			<p>Gender: <%=currentMonster.gender%></p>
-			<p>Favorite Food: <%=currentMonster.food%></p>
-			<h3>Characteristics</h3>
-			<ul>
-			<% currentMonster.characteristics.forEach(function(char) { %>
-					<li><%=char%></li>
-				<% })
-			%>
-			</ul>
+		
+	<h2><%=currentMonster.name%></h2>
+	<picture>
+		<img src="../<%=currentMonster.image%>" alt="monster headshot">
+	</picture>
 
-			<h3>Description</h3>
-			<% currentMonster.description.forEach(function(paragraph) { %>
-					<p><%=paragraph%></p>
-				<% })
-			%>
-			
-			<div>
-			<a class="button1" href="/adopt">Adoption Info</a>
-		</div>
+	<stat-list>
+			<div><strong>Current Age:</strong></div>
+			<div><%=currentMonster.age%> Years</div>
+			<div><strong>Gender ID:</strong></div>
+			<div><%=currentMonster.gender%></div>
+			<div><strong>Favorite Food:</strong></div>
+			<div><%=currentMonster.food%></div>
+	</stat-list>
+	
+	<ul class="characteristics">
+		<h3>Characteristics</h3>
+		<% currentMonster.characteristics.forEach(function(char) { %>
+			<li><%=char%></li>
+		<% }) %>
+	</ul>
 
-		</module-name>
+	<div class="description">
+	<h3>Description</h3>
+		<% currentMonster.description.forEach(function(paragraph) { %>
+				<p><%=paragraph%></p>
+			<% }) %>
+	</div>
+	
+	<div>
+		<a class="button1" href="/adopt">Adoption Info</a>
+	</div>
+
 
 	</inner-column>
 </section>
