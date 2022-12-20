@@ -41,6 +41,7 @@
 
 		h2 {
 			margin: 0px;
+			color: var(--highlight2);
 		}
 
 		//portrait
@@ -83,7 +84,7 @@
 }
 
 	.card:hover {
-		box-shadow: 6px 6px 0 var(--highlight);
+		box-shadow: var(--highlight-shadow);
 		transition: box-shadow .25s ease-in-out;
 	}
 
