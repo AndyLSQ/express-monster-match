@@ -249,16 +249,39 @@ section.meet ul.monsters {
   grid-template-columns: repeat(3, 1fr);
   gap: 35px;
 }
-section.meet .card {
+@media (max-width: 950px) {
+  section.meet ul.monsters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  section.meet ul.monsters {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card {
   display: flex;
   flex-direction: column;
   background-color: var(--paper-accent);
   border: 2px solid var(--ink);
   box-shadow: var(--full-shadow);
-  padding: 30px;
+  padding: 25px;
   position: relative;
 }
-section.meet .card status-label {
+.card card-overlay {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.card card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+.card status-label {
   position: absolute;
   transform: translate(-50%, -50%) rotate(-30deg);
   top: 50%;
@@ -274,43 +297,44 @@ section.meet .card status-label {
   opacity: 1;
   z-index: 5;
 }
-section.meet .card card-data {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 30px;
+.card h2 {
+  margin: 0px;
 }
-section.meet .card card-stats strong {
-  margin-right: 10px;
-}
-section.meet .card picture {
-  aspect-ratio: 1/1;
+.card picture {
+  aspect-ratio: 6/5;
   border: 2px solid var(--ink);
   overflow: hidden;
 }
-section.meet .card img {
+.card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-section.meet .card description-text {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+.card div.stat {
+  display: inline-block;
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: var(--highlight3);
+  font-weight: 600;
 }
-section.meet .card a.button2 {
+.card div.stat.Female {
+  background-color: pink;
+}
+.card div.stat.Male {
+  background-color: lightblue;
+}
+.card a.button2 {
   display: flex;
   margin-top: auto;
 }
-section.meet .card strong {
-  font-weight: bold;
-  color: var(--highlight2);
-}
-section.meet .card:hover {
+
+.card:hover {
   box-shadow: 6px 6px 0 var(--highlight);
   transition: box-shadow 0.25s ease-in-out;
 }
-section.meet .adopted card-content {
+
+.adopted card-overlay {
   opacity: 0.35;
 }
 
