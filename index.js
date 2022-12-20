@@ -47,10 +47,14 @@ app.get('/', async (req, res) => {
 // })
 
 app.get('/monsters', async(request, response) => {
-  const monsters = await client.getAllByType('monster');
+  let monsters = await client.getAllByType('monster');
   response.render('monsters', { monsters });
 	// response.render('monsters', {data: monsters})
 })
+
+// app.get('/monsters', function(request, response) {
+//   response.render('monsters', {data: monsters})
+// })
 
 app.get('/adopt', function(request, response) {
 	response.render('adopt')
@@ -61,6 +65,7 @@ app.get('/about', function(request, response) {
 })
 
 app.get('/detail/:id', function(request, response) {
+  // let monsters = await client.getAllByType('monster');
 	response.render('detail', {data: monsters, params: request.params})
 })
 
